@@ -1,0 +1,93 @@
+<%-- 
+    Document   : student
+    Created on : 29 Oct 2023, 12:06:16
+    Author     : user
+--%>
+<%@include file="header.jsp" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <div class="jumborton bg-white text-center">
+            <h1>ADD STUDENT</h1>
+
+        </div>
+        <div class="mx-4">
+            <form class="row g-3" action="about.jsp" method="get">
+                <div class="col-12">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-md-6">
+                    <label for="gender" class="form-label">Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Male">
+                        <label class="form-check-label" for="Male">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Female" >
+                        <label class="form-check-label" for="Female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Open this select menu</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Khulna">Khulna</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="reset" class="btn btn-danger">Reset</button>
+
+
+                </div>
+            </form>
+
+        </div>
+    </body>
+</html>
