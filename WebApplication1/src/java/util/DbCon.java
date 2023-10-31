@@ -25,7 +25,7 @@ public class DbCon {
     public static Connection getCon() {
 
         try {
-            Class.forName(url);
+            Class.forName(driver);
             con = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DbCon.class.getName()).log(Level.SEVERE, null, ex);

@@ -7,13 +7,13 @@
 
 
 <%
-    List<Student> slist = Studentdao.getAllRecords();
-    request.setAttribute("slist", slist);
+    List<Student> list = Studentdao.getAllRecords();
+    request.setAttribute("list", list);
 %>
 
 
 
-<div class=" my-3 py-2">
+<div class="container my-3 py-2">
     <div class="jumborton text-light bg-dark text-center my-2">
         <h1>Student Database</h1>
     </div>
@@ -33,7 +33,7 @@
             </tr>
         </thead>
         <tbody>
-            <c:forEach items="${slist}" var="s" >
+            <c:forEach items="${list}" var="s" >
                 <tr>
                     <th>${s.getIdstudent()}</th>
                     <td>${s.getsName()}</td>
@@ -44,14 +44,9 @@
                     <td>${s.getCity()}</td>
                     <td>${s.getState()}</td>
                     <td>${s.getZip()}</td>
-                    <td >
-
-                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <button type="button" class="btn btn-primary">Edit</button>
-                            <button type="button" class="btn btn-warning">Delete</button>
-                            
-                        </div>
-
+                    <td>
+                        <button type="Edit" class="btn btn-primary">Edit</button>
+                        <button type="Delete" class="btn btn-warning">Delete</button>
 
                     </td>
                 </tr>

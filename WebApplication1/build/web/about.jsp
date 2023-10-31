@@ -15,3 +15,4 @@
         <h1>About JSP</h1>
     </body>
 </html>
+<%@include file="footer.jsp" %>

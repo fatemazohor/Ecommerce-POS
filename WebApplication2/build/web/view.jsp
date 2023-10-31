@@ -7,8 +7,8 @@
 
 
 <%
-    List<Student> list = Studentdao.getAllRecords();
-    request.setAttribute("list", list);
+    List<Student> slist = Studentdao.getAllRecords();
+    request.setAttribute("slist", slist);
 %>
 
 
@@ -33,7 +33,7 @@
             </tr>
         </thead>
         <tbody>
-            <c:forEach items="${list}" var="s" >
+            <c:forEach items="${slist}" var="s" >
                 <tr>
                     <th>${s.getIdstudent()}</th>
                     <td>${s.getsName()}</td>
