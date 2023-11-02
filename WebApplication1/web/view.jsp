@@ -45,9 +45,11 @@
                     <td>${s.getState()}</td>
                     <td>${s.getZip()}</td>
                     <td>
-                        <button type="Edit" class="btn btn-primary">Edit</button>
-                        <button type="Delete" class="btn btn-warning">Delete</button>
-
+                        <a href="editFrom.jsp?student=${s.getIdstudent()}" class="btn btn-primary">Edit</a>
+                        <a href="delete.jsp?idstudent=${s.getIdstudent()}" class="btn btn-warning">Delete</a>
+                        
+                        <!-- for edit: student is any variable which has to be same
+                           as editFrom.jsp getParameter('student'). -->
                     </td>
                 </tr>
             </c:forEach>
