@@ -22,6 +22,7 @@
 <table class="table table-striped table-hover">
     <thead>
         <tr>
+        <th>Index</th>
         <th>Id</th>
         <th>Full Name</th>
         <th>User Name</th>
@@ -34,12 +35,13 @@
         <c:forEach items="${ulist}" var="u">
             <tr>
                 <td>${u.getIndex()}</td>
+                <td>${u.getUid()}</td>
                 <td>${u.getFullName()}</td>
                 <td>${u.getUserName()}</td>
                 <td>${u.getPassword()}</td>
                 <td>${u.getEmail()}</td>
                 <td>
-                    <a href="editForm.jsp" class="btn btn-primary">Edit</a>
+                    <a href="editFrom.jsp?myid=${u.getUserName()}" class="btn btn-primary">Edit</a>
                     <a href="deleteUser.jsp" class="btn btn-warning">Delete</a>
                 </td>
             </tr>   
