@@ -1,6 +1,7 @@
 package model;
 // Generated 11-Nov-2023 11:12:48 by Hibernate Tools 4.3.1
 
+import dao.Studentdao;
 import javax.faces.bean.ManagedBean;
 
 
@@ -66,7 +67,12 @@ public class Students  implements java.io.Serializable {
     }
 
 
-
+    public void save(){
+    
+    Studentdao dao= new Studentdao();
+        dao.addStudent(this);
+        System.out.println("only students ManagedBean save method work");
+    }
 
 }
 

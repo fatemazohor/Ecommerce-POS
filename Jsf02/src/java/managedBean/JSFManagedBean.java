@@ -28,6 +28,6 @@ public class JSFManagedBean {
         Students s=new Students();
         Studentdao dao= new Studentdao();
         dao.addStudent(s);
-    
+        System.out.println("ManagedBean save method work");
     }
 }

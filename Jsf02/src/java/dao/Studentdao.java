@@ -14,6 +14,7 @@ public class Studentdao {
             tr = se.beginTransaction();
             se.save(s);
             tr.commit();
+            System.out.println("Student daw addStudnet methode work");
         } catch (Exception e) {
             e.printStackTrace();
         }
