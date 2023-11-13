@@ -5,15 +5,16 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <h:head>
-        <title>Add Student</title>
+        <title>Update Student</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
     </h:head>
     <h:body>
         <f:view>
             <h:form>
                 <div class="container aling-middlet">
-                    <h1 class="text-center fs-2 py-2">Add New Student Form</h1>
+                    <h1 class="text-center fs-2 py-2">Update Student Form</h1>
                     <div class="mb-3">
+                        <h:inputHidden value="#{studentManagedBean.stu.id}"></h:inputHidden>
                         <h:outputLabel value="Student Name:" class="form-label"/>
                         <h:inputText value="#{studentManagedBean.stu.sname}" class="form-control"></h:inputText>
                         <br/>
@@ -50,4 +51,3 @@
 
     </h:body>
 </html>
-

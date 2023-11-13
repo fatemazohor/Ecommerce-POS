@@ -44,13 +44,14 @@
             <h:column>
                 <div class="btn-group">
                     <f:facet name="header">Action</f:facet>
-                    <h:commandButton action="#" value="Edit" class="btn btn-warning"></h:commandButton>
-                    <h:commandButton action="#" value="Delete" class="btn btn-danger"></h:commandButton>
+                    <h:commandButton action="#{studentManagedBean.editStudent(s.id)}" value="Edit" class="btn btn-warning"></h:commandButton>
+                    <h:commandButton action="#{studentManagedBean.delete(s.id)}" value="Delete" onclick="return confirm('Student id '+#{s.id}+' Will be deleted. Are you sure?')" class="btn btn-danger"></h:commandButton>
                 </div>
                 
             </h:column>
         </h:dataTable>
             </div>
+            <h:commandButton action="index.xhtml" value="Add New"></h:commandButton>
         </h:form>
     </h:body>
 </html>
