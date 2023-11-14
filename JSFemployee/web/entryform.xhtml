@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Entry form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <div class="container aling-middle">
+            <p class="text-center fs-2">Employee Form</p>
+            <h:form styleClass="row g-3">
+                <h:outputLabel styleClass="fw-bold"  value="Full Name"></h:outputLabel>
+                <h:inputText value="#{newJSFManagedBean.emp.ename}"></h:inputText>
+                
+                <h:outputLabel style="font-weight: bold" value="Email"></h:outputLabel>
+                <h:inputText value="#{newJSFManagedBean.emp.email}"></h:inputText>
+                
+                <h:outputLabel styleClass="fw-bold" value="Subject"></h:outputLabel>
+                
+                <h:selectOneMenu value="#{newJSFManagedBean.emp.subject}">
+                    <f:selectItem itemLabel="JEE" itemValue="JEE"></f:selectItem>
+                    <f:selectItem itemLabel="NT" itemValue="NT"></f:selectItem>
+                    <f:selectItem itemLabel="DDD" itemValue="DDD"></f:selectItem>
+                </h:selectOneMenu>
+                
+                <h:outputLabel styleClass="fw-bold" value="Gender"></h:outputLabel>
+                
+                <h:selectOneRadio value="#{newJSFManagedBean.emp.gender}">
+                    <f:selectItem itemLabel="Male" itemValue="male"></f:selectItem>
+                    <f:selectItem itemLabel="Female" itemValue="female"></f:selectItem>
+                </h:selectOneRadio>
+                
+                <h:outputLabel styleClass="fw-bold" value="Location"></h:outputLabel>
+                <h:inputText value="#{newJSFManagedBean.emp.locationa}"></h:inputText>
+                
+                <div class="col-12">
+                    <h:commandButton styleClass="btn btn-primary" action="#{newJSFManagedBean.save()}" value="Submit"></h:commandButton>
+                   
+                </div>
+                <div class="col-6">
+                    <h:button outcome="index.xhtml" value="data"></h:button>
+                </div>
+                
+            </h:form>
+        </div>
+        
+    </body>
+</html>

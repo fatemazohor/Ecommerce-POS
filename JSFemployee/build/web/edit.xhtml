@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Entry form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div>
+            <h:form>
+                <h:inputHidden value="#{newJSFManagedBean.emp.id}"></h:inputHidden>
+                <h:outputLabel value="Full Name"></h:outputLabel>
+                <h:inputText value="#{newJSFManagedBean.emp.ename}"></h:inputText>
+                <br></br>
+                <h:outputLabel value="Email"></h:outputLabel>
+                <h:inputText value="#{newJSFManagedBean.emp.email}"></h:inputText>
+                <br></br>
+                <h:outputLabel value="Subject"></h:outputLabel>
+                <br></br>
+                <h:selectOneMenu value="#{newJSFManagedBean.emp.subject}">
+                    <f:selectItem itemLabel="JEE" itemValue="JEE"></f:selectItem>
+                    <f:selectItem itemLabel="NT" itemValue="NT"></f:selectItem>
+                    <f:selectItem itemLabel="DDD" itemValue="DDD"></f:selectItem>
+                </h:selectOneMenu>
+                <br></br>
+                <h:outputLabel value="Gender"></h:outputLabel>
+                
+                <h:selectOneRadio value="#{newJSFManagedBean.emp.gender}">
+                    <f:selectItem itemLabel="Male" itemValue="male"></f:selectItem>
+                    <f:selectItem itemLabel="Female" itemValue="female"></f:selectItem>
+                </h:selectOneRadio>
+                <br></br>
+                <h:outputLabel value="Location"></h:outputLabel>
+                <h:inputText value="#{newJSFManagedBean.emp.locationa}"></h:inputText>
+                <br></br>
+                <h:commandButton action="#{newJSFManagedBean.save()}" value="Submit"></h:commandButton>
+                <br></br>
+            </h:form>
+        </div>
+    </body>
+</html>
