@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Employee list</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable value="#{empFManagedBean.viewem()}" var="em">
+                <h:column>
+                    <f:facet name="header">Id</f:facet>#{em.id}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Name</f:facet>#{em.ename}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Designation</f:facet>#{em.designation}
+                </h:column>
+                <h:column>
+                    <div>
+                        <f:facet name="header">Action</f:facet>
+                        <h:commandButton value="Edit" action="#{empFManagedBean.editemp(em.id)}"></h:commandButton>
+                        <h:commandButton value="Delete" action="#{empFManagedBean.delete(em.id)}" onclick="return 
+                            confirm('Are you sure?')"></h:commandButton>
+                    </div>
+                    
+                </h:column>
+            </h:dataTable>
+            <h:commandButton action="index.xhtml" value="Data Form"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
